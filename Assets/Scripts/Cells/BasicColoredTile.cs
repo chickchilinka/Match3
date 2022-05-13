@@ -1,4 +1,5 @@
 using Cells.Slots;
+using Cells.Tiles;
 using UniRx;
 
 namespace Cells
@@ -6,6 +7,7 @@ namespace Cells
     public class BasicColoredTile : ITile
     {
         public ReactiveProperty<TileColor> TileColor { get; private set; }
+        public TileConfig Config { get; set; }
         public ITileSlot Slot { get; set; }
         public bool CanFall { get; private set; } = true;
 

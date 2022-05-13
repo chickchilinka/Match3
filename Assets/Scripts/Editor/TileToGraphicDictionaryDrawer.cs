@@ -1,4 +1,4 @@
-﻿using Cells;
+﻿using Cells.View;
 using UnityEditor;
 
 namespace Editor

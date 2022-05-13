@@ -10,6 +10,8 @@ namespace Cells.Slots
     {
         [Inject]
         private FieldController _controller;
+
+        public Vector2Int Location { get; set; }
         public ITile Tile { get; set; }
         public bool Blocked { get; set; }
     }

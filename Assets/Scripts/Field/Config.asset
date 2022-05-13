@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3dbb01964164ad0b225801b8f851f0f, type: 3}
   m_Name: Config
   m_EditorClassIdentifier: 
+  _configRows: []
   _configRows:
   - Cells:
     - {fileID: 0}

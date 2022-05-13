@@ -1,19 +1,18 @@
 using System;
 using Cells.Tiles;
-using Cells.View;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Cells
+namespace Cells.View
 {
     [CreateAssetMenu(fileName = "Tile view config", menuName = "Tiles/Tile view config", order = 0)]
     public class TileViewConfig : ScriptableObject, ITileViewConfig
     {
 
-        [SerializeField] private TileToGraphicDictionary _graphics;
+        [SerializeField] private TileToGraphicDictionary graphics;
         public TileGraphic GetGraphicFor(ITile tile)
         {
-            return null;
+            return graphics[tile.Config];
         }
     }
     [Serializable]

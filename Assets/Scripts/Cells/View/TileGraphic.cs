@@ -1,6 +1,8 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Tilemaps;
 
 namespace Cells.View
 {
@@ -8,9 +10,24 @@ namespace Cells.View
     public class TileGraphic
     {
         [SerializeField]
-        protected ReactiveProperty<Sprite> _sprite;
-        public ReactiveProperty<Sprite> TileSprite => _sprite;
+        private Sprite sprite;
+        public Sprite TileSprite
+        {
+            get => sprite;
+            set
+            {
+                sprite = value;
+                SomethingChanged.Execute(this);
+            }
+        }
+
+        protected ReactiveCommand<TileGraphic> SomethingChanged = new ReactiveCommand<TileGraphic>();
         
+        public void Subscribe(IObserver<TileGraphic> observer)
+        {
+            SomethingChanged.Subscribe(observer);
+        }
+
         public void Animate(string animation){}
     }
 }

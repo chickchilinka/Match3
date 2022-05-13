@@ -6,9 +6,12 @@ namespace Cells.Tiles
     {
         public static ITile ForConfig(TileConfig config)
         {
+            ITile tile = null;
             if (config.Colored)
             {
-                return new BasicColoredTile(config.Color);
+                tile = new BasicColoredTile(config.Color);
+                tile.Config = config;
+                return tile;
             }
             throw new NotImplementedException();
         }

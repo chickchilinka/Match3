@@ -12,6 +12,7 @@ namespace Field.View
 
         public void DisplaySlots(ITileSlot[][] slots)
         {
+            
         }
     }
 }
