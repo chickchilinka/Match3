@@ -10,7 +10,17 @@ namespace Field.View
         [Inject] private FieldController _fieldController;
         [Inject] private ITileViewConfig _config;
 
-        public void DisplaySlots(ITileSlot[][] slots)
+        public void CreateSlotsView(ITileSlot[][] slots)
+        {
+            foreach (var slotRow in slots)
+            {
+                foreach (var slot in slotRow)
+                {
+                }
+            }
+        }
+
+        private void CreateSlotView(ITileSlot slot)
         {
             
         }

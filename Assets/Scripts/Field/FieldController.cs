@@ -12,11 +12,6 @@ namespace Field
         [Inject] 
         private IFieldConfig _fieldConfig;
         private ITileSlot[][] _slots;
-        
-        private void Awake()
-        {
-            
-        }
 
         public void TrySwap(ITileSlot slot1, ITileSlot slot2)
         {

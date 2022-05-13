@@ -1,9 +1,11 @@
-﻿using Cells.View;
+﻿using Cells.Slots;
+using Cells.View;
 
 namespace Cells
 {
     public interface ITileViewConfig
     {
-        TileGraphic GetGraphicFor(ITile tile);
+        Graphic GetGraphicFor(ITile tile);
+        Graphic GetGraphicFor(ITileSlot tileSlot);
     }
 }

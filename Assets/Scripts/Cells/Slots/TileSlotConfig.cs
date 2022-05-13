@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Cells.Slots
 {
-    [System.Serializable]
+    [CreateAssetMenu(menuName = "Field/Slots/Slot config", fileName = "Slot config")]
     public class TileSlotConfig:ScriptableObject
     {
         public bool Blocked;
