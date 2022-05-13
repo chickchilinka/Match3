@@ -1,4 +1,5 @@
-using Tiles;
+using Cells;
+using Cells.Slots;
 
 namespace Field
 {

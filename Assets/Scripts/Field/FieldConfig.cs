@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Tiles;
+using Cells;
+using Cells.Slots;
 using UnityEngine;
 
 namespace Field
@@ -8,7 +9,7 @@ namespace Field
     [CreateAssetMenu(menuName = "Tiles/Field Config", fileName = "Field Config")]
     public class FieldConfig:ScriptableObject, IFieldConfig
     {
-        public List<TileSlotConfigRow> _configRows;
+        public List<FieldConfigRow> _configRows;
         public ITileSlot[][] Slots
         {
             get
@@ -18,7 +19,7 @@ namespace Field
                 {
                     for (int j = 0; j < _configRows[i].Cells.Length; j++)
                     {
-                        slots[i][j] = TileSlotFactory.ForConfig(_configRows[i].Cells[j]);
+                        slots[i][j] = CellFactory.ForConfig(_configRows[i].Cells[j]);
                     }
                 }
                 return slots;
